@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Finding UPV Pets: Report Sighting</title>
+    <link rel="stylesheet" href="css/style.css">    
+</head>
+<body>
+    <div class="form-card">
+        <h2>📝 Report a Sighting</h2>
+
+        <!-- make the options dynamic -->
+        <!-- <label>Which pet?</label> -->
+        <select>
+            <option>Select a Pet</option>
+            <option>Cassie</option>
+        </select>
+    
+        <!-- <label>Where?</label> -->
+        <select>
+            <option>Select a Spot</option>
+            <option>Canteen</option>
+        </select>
+
+        <div class="time-section">
+            <label><b>Select Time(s) Seen:</b></label>
+            <label><input type="checkbox" name="timeRange" value="4AM-6:59AM">4:00 AM – 6:59 AM</label>
+            <label><input type="checkbox" name="timeRange" value="7AM-9:59AM">7:00 AM – 9:59 AM</label>
+            <label><input type="checkbox" name="timeRange" value="10AM-12:59PM">10:00 AM – 12:59 PM</label>
+        </div>
+
+        <button>Submit</button>
+    </div>
+    <footer>
+        <a href="index.html" class="back-btn">← Go Back</a>
+    </footer>
+</body>

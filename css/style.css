@@ -1,0 +1,107 @@
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background: #F0FDF4;
+  margin: 0;
+  text-align: center;
+  color: #14532D;
+  padding: 40px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 250px;
+  padding: 25px;
+  border-radius: 15px;
+  text-decoration: none;
+  background: #FFFFFF;
+  color: white;
+  transition: 0.25s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.report {
+  background: linear-gradient(135deg, #22C55E, #16A34A);
+}
+
+.search {
+  background: linear-gradient(135deg, #F97316, #EA580C);
+}
+
+/* forms */
+.form-card {
+  background: white;
+  width: 340px;
+  margin: 50px auto;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-top: 3px solid #14532D;
+}
+
+select, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 1px solid #14532D;
+  outline: none;
+}
+
+.time-section {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.time-section label {
+  display: block;
+  margin: 6px 0;
+  cursor: pointer;
+}
+
+.time-section input {
+  margin-right: 8px;
+}
+
+select:focus {
+  border-color: #14532D;
+}
+
+button {
+  background: #14532D;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #16A34A;
+}
+
+.back-btn {
+  display: inline-block;
+  margin: 20px 0;
+  padding: 8px 14px;
+  background: #14532D;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #16A34A;
+  transform: translateY(-2px);
+}
