@@ -1,0 +1,234 @@
+{ 
+    "dogs": {   
+        "Ampon": {
+            "photo": "images/dogs/ampon.png",
+            "reports": {}
+        },
+
+        "Bella/Kendall": {
+            "photo": "images/dogs/bella.png",
+            "reports": {}
+        },
+
+        "Betty": {
+            "photo": "images/dogs/betty.png",
+            "reports": {}
+        },
+        
+        "Blanca": {
+            "photo": "images/dogs/blanca.png",
+            "reports": {}
+        },
+        
+        "Blanch": {
+            "photo": "images/dogs/blanch.png",
+            "reports": {}
+        },
+        
+        "Blythe": {
+            "photo": "images/dogs/blythe.png",
+            "reports": {}
+        },
+
+        "Brownie/Leni": {
+            "photo": "images/dogs/brownie.png",
+            "reports": {}
+        },
+
+        "Butterscotch/Tiger/Hyena": {
+            "photo": "images/dogs/butterscotch.png",
+            "reports": {}
+        },
+
+        "Carrot Cake": {
+            "photo": "images/dogs/carrotcake.png",
+            "reports": {}
+        },
+
+        "CM": {
+            "photo": "images/dogs/cm.png",
+            "reports": {}
+        },
+
+        "Ducky": {
+            "photo": "images/dogs/ducky.png",
+            "reports": {}
+        },
+
+        "Jewel": {
+            "photo": "images/dogs/jewel.png",
+            "reports": {}
+        },
+
+        "Lassie": {
+            "photo": "images/dogs/lassie.png",
+            "reports": {}
+        },
+
+        "Lee Roi/Saki": {
+            "photo": "images/dogs/saki.png",
+            "reports": {}
+        },
+
+        "Maan": {
+            "photo": "images/dogs/maan.png",
+            "reports": {}
+        },
+
+        "Mathilda/YangYang": {
+            "photo": "images/dogs/mathilda.png",
+            "reports": {}
+        },
+
+        "Milo": {
+            "photo": "images/dogs/milo.png",
+            "reports": {}
+        },
+
+        "Mimi": {
+            "photo": "images/dogs/mimi.png",
+            "reports": {}
+        },
+
+        "Molly": {
+            "photo": "images/dogs/molly.png",
+            "reports": {}
+        },
+
+        "Odette": {
+            "photo": "images/dogs/odette.png",
+            "reports": {}
+        },
+
+        "Paquito Sr.": {
+            "photo": "images/dogs/paquito.png",
+            "reports": {}
+        },
+
+        "Patchy/Isko/Panda/Spharks": {
+            "photo": "images/dogs/patchy.png",
+            "reports": {}
+        },
+
+        "Potpot": {
+            "photo": "images/dogs/potpot.png",
+            "reports": {}
+        },
+
+        "Puppy": {
+            "photo": "images/dogs/puppy.png",
+            "reports": {}
+        },
+
+        "Scar 2.0": {
+            "photo": "images/dogs/scar2.png",
+            "reports": {}
+        },
+
+        "Shane": {
+            "photo": "",
+            "reports": {}
+        },
+
+        "Shiela/Caramel": {
+            "photo": "images/dogs/shiela.png",
+            "reports": {}
+        },
+
+        "Spot": {
+            "photo": "images/dogs/spot.png",
+            "reports": {}
+        },
+
+        "Brwylee": {
+            "photo": "images/dogs/brwylee.png",
+            "reports": {}
+        }
+    },
+
+    "cats": {
+        "Coli": {
+            "photo": "images/cats/coli.png",
+            "reports": {}
+        },
+
+        "Goldie": {
+            "photo": "images/cats/goldie.png",
+            "reports": {}
+        },
+
+        "Katy Perry": {
+            "photo": "images/cats/katyperry.png",
+            "reports": {}
+        },
+
+        "Maomao/Ginger": {
+            "photo": "images/cats/maomao.png",
+            "reports": {}
+        },
+
+        "Meric": {
+            "photo": "images/cats/meric.png",
+            "reports": {}
+        },
+
+        "Mother Litob": {
+            "photo": "images/cats/motherlitob.png",
+            "reports": {}
+        },
+
+        "Nella": {
+            "photo": "images/cats/nella.png",
+            "reports": {}
+        },
+
+        "Tanjiro": {
+            "photo": "images/cats/tanjiro.png",
+            "reports": {}
+        },
+
+        "Tiger": {
+            "photo": "images/cats/tiger.png",
+            "reports": {}
+        },
+
+        "Badbad": {
+            "photo": "images/cats/badbad.png",
+            "reports": {}
+        },
+        "Midnight": {
+            "photo": "images/cats/midnight.png",
+            "reports": {}
+        },
+
+        "Albie": {
+            "photo": "images/cats/albie.png",
+            "reports": {}
+        },
+
+        "Peachy": {
+            "photo": "images/cats/peachy.png",
+            "reports": {}
+        },
+
+        "Muzan": {
+            "photo": "images/cats/muzan.png",
+            "reports": {}
+        },
+
+        "Patches": {
+            "photo": "images/cats/patches.png",
+            "reports": {}
+        },
+
+        "Trisha": {
+            "photo": "images/cats/trisha.png",
+            "reports": {}
+        },
+
+        "Michaella/Mikay": {
+            "photo": "images/cats/mikay.png",
+            "reports": {}
+        }
+    }
+}
