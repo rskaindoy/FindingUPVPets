@@ -67,10 +67,14 @@
             "photo": "images/dogs/blanch.png",
             "reports": {
                 "2026-05-11": {
-                    "CFOS OWL-Wet Lab": 2
+                    "01:00 PM - 03:59 PM": {
+                        "CFOS OWL-Wet Lab": 2
+                    }
                 },
                 "2026-05-12": {
-                    "New Admin/Box 1": 1
+                    "10:00 AM - 12:59 PM": {
+                        "New Admin/Box 1": 1
+                    }
                 }
             }
         },
@@ -93,7 +97,7 @@
                         "Covered Court/Lover's Lane": 3
                     }
                 },
-                "2026-05-26": {
+                "2026-05-25": {
                     "07:00 AM - 09:59 AM": {
                         "Box 2-Physical Plant Office-CDMO": 1
                     }
@@ -160,7 +164,9 @@
             "photo": "images/dogs/saki.png",
             "reports": {
                 "2026-05-10": {
-                    "CUB/Mushroom": 2
+                    "10:00 AM - 12:59 PM": {
+                        "CUB/Mushroom": 2
+                    }
                 }
             }
         },
