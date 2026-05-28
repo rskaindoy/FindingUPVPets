@@ -9,7 +9,6 @@
 </head>
 
 <body>
-    <!-- pop up window for choosing pet -->
     <div id="pet-modal" class="modal-overlay hidden">
         <div class="modal-window">
             <div class="modal-header">
@@ -18,9 +17,9 @@
             </div>
             <div class="modal-body">
                 <div class="pet-display">
-                    {% for id, pet in pets.items() %}
-                        <div class="pet-select-card" onclick="selectPet('{{ pet.name }}', '{{ pet.photo }}')">
-                            <img src="{{ url_for('static', filename=pet.photo.replace('../', '')) }}" alt="{{ pet.name }}">
+                    {% for pet in pets %}
+                        <div class="pet-select-card" onclick="selectPet('{{ pet.id }}', '{{ pet.name }}', '{{ pet.photo }}')">
+                            <img src="{{ url_for('static', filename=pet.photo) }}" alt="{{ pet.name }}">
                             <p>{{ pet.name }}</p>
                         </div>
                     {% endfor %}
@@ -28,7 +27,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="form-card">
         <h2>📝 Report a Sighting</h2>
@@ -40,16 +38,16 @@
                 </div>
             </div>
         
-            <input type="hidden" id="selected-pet-name" name="pet" value="{{ pet.name }}">
-            <p>Intruction: Check out the photos and let us know who you spotted!</p>
+            <input type="hidden" id="selected-pet-name" name="pet" value="">
+            
+            <p>Instruction: Check out the photos and let us know who you spotted!</p>
             <a href="#" class="open-popup-btn" onclick="openModal(); return false;">Choose</a>
         </div>
 
         <div class="location-section">
             <select id="location">
                 <option value="" disabled selected>-- Select a Spot --</option>
-
-                {% for l in locations.locations %}
+                {% for l in locations %}
                 <option value="{{ l }}">{{ l }}</option>
                 {% endfor %}
             </select>
@@ -57,9 +55,9 @@
 
         <div class="time-section">
             <label><b>Select Time(s) Seen:</b></label>
-            {% for t in times.time %}
+            {% for t in times %}
                 <label for="{{ t }}">
-                <input type="checkbox" name="timeRange" value="{{ t }}" id="{{ t }}">
+                <input type="radio" name="timeRange" value="{{ t }}" id="{{ t }}">
                 {{ t }}
                 </label>
             {% endfor %}
@@ -73,5 +71,5 @@
     </footer>
 
     <script src="../static/js/app.js"></script>
-    <script src="../static/js/report.js"></script>
 </body>
+</html>

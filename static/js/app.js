@@ -72,18 +72,19 @@ async function submitReport() {
 
     const pet = document.getElementById("selected-pet-name").value;
     const location = document.getElementById("location").value;
-    const time = document.querySelector('input[name="timeRange"]:checked');
+    const time = document.querySelector('input[name="timeRange"]:checked').value;
 
-    if (!pet || !pet.value) {
-        alert("Select a pet.");
+    console.log("Data to send:", { pet, location, time});
+    if (!pet || pet === "") {
+        alert("Please elect a pet.");
         return;
     }
     if (!location || location === "-- Select a Spot --") {
-        alert("Select a location");
+        alert("Please select a location");
         return;
     }
     if (!time) {
-        alert("Select a time range.");
+        alert("Please select a time range.");
         return;
     }
 
@@ -99,8 +100,48 @@ async function submitReport() {
 
     const data = await response.json();
     alert(data.message);
+    window.location.href ="/";
 }
 
+function openModal() {
+    const modal = document.getElementById('pet-modal');
+    if (modal) {
+        modal.classList.remove('hidden');
+    }
+}
+
+// close modal
+const closeBtn = document.getElementById('close-modal-btn');
+if (closeBtn) {
+    closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('pet-modal').classList.add('hidden');
+    });
+}
+
+
+/**
+ * @param {string} id
+ * @param {string} name
+ * @param {string} photo
+ */
+
+function selectPet(id, name, photo) {
+
+    document.getElementById('selected-pet-name').value = id;
+
+    const display = document.querySelector('.selected-pet-details');
+    
+
+    const imagePath = `/static/${photo}`;
+    
+    display.innerHTML = `
+        <img src="${imagePath}" alt="${name}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 50%;">
+        <p>Selected: <b>${name}</b></p>
+    `;
+    
+    document.getElementById('pet-modal').classList.add('hidden');
+}
 
 document.addEventListener("DOMContentLoaded", function () {
     const petSelect = document.getElementById("pet"); //pet selection

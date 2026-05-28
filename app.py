@@ -6,37 +6,18 @@ from backend.search import get_ranked_results
 
 app = Flask(__name__)
 
+TIME_SLOTS = [
+    "01:00 AM - 03:59 AM",
+    "04:00 AM - 06:59 AM",
+    "07:00 AM - 09:59 AM",
+    "10:00 AM - 12:59 PM",
+    "01:00 PM - 03:59 PM",
+    "04:00 PM - 06:59 PM",
+    "07:00 PM - 09:59 PM",
+    "10:00 PM - 12:59 AM"
+]
 
-
-
-# insert logic here
-
-
-# routes
-@app.route("/")
-def home():
-    return render_template("index.html")
-
-@app.route("/report")
-def report():
-    pet_list = sorted([pet.title() for pet in PETS_DB.keys()])
-    return render_template("report.html", pets=pet_list)
-
-@app.route("/search")
-def search():
-    pet_list = sorted(PETS_DB.keys())
-        
-    time_slots = [
-        "07:00 AM - 09:59 AM",
-        "10:00 AM - 12:59 PM",
-        "01:00 PM - 03:59 PM",
-        "04:00 PM - 06:59 PM",
-        "07:00 PM - 09:59 PM",
-        "10:00 PM - 12:59 AM",
-        "01:00 AM - 03:59 AM"
-    ]
-    
-    PET_IMAGES = {
+PET_IMAGES = {
         "ampon":        "images/dogs/ampon.png",
         "bella":        "images/dogs/bella.png",
         "betty":        "images/dogs/betty.png",
@@ -84,17 +65,75 @@ def search():
         "trisha":       "images/cats/trisha.png",
         "mikay":        "images/cats/mikay.png",
     }
-    return render_template("search.html", pets=pet_list, times=time_slots, images=PET_IMAGES)
+
+LOCATIONS = [
+
+    "SOTECH",
+    "CAS",
+    "CM",
+    "CFOS Park-Pidlaoan Hall-Umali Hall",
+    "CFOS OWL-Wet Lab",
+    "CFOS Hatchery",
+    "CUB/Mushroom",
+    "RRC/New Library",
+    "Old Admin",
+    "New Admin/Box 1",
+    "Dorm/CDH",
+    "Box 2-Physical Plant Office-CDMO",
+    "Staff House",
+    "SSF-HSU-Executive House",
+    "Teacher's Dorm",
+    "Covered Court/Lover's Lane"
+]
+
+
+# insert logic here
+
+
+# routes
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+@app.route("/report")
+def report():
+    pets_data = []
+    
+    for pet_id, pet_data in PETS_DB.items():
+        pets_data.append({
+            "id": pet_id, 
+            "name": pet_id.title(),
+            "photo": PET_IMAGES.get(pet_id.lower(), "images/default-placeholder.png")
+        })
+    return render_template("report.html", pets=pets_data, locations=LOCATIONS, times=TIME_SLOTS)
+
+@app.route("/search")
+def search():
+    pet_list = sorted(PETS_DB.keys())
+    return render_template("search.html", pets=pet_list, times=TIME_SLOTS, images=PET_IMAGES)
 
 # submit new report
 @app.route("/submit-report", methods=["POST"])
 def submit_report():
-    pass
-    # new data
-    # create pet/loc/time if not existing in dictionary
+    data = request.get_json()
+    pet = data.get("pet", "").lower()
+    location = data.get("location")
+    time = data.get("time")
+
+    print(f"DEBUG: Received pet={pet}, time={time}, location={location}")
+
+    if pet not in PETS_DB:
+        return jsonify({"message": "Pet not found"}), 404
+
+    if time not in PETS_DB[pet]:
+        PETS_DB[pet][time] = {}
+        
+    current_count = PETS_DB[pet][time].get(location, 0)
+    PETS_DB[pet][time][location] = current_count + 1
+
+    return jsonify({"message": f"Successfully reported {pet.title()}!"})
 
 
-@app.route("/search-pet", methods=["POST"])
 def search_pet():
     data = request.json
     pet = data['pet'].lower()      
@@ -103,6 +142,12 @@ def search_pet():
     pet_info = PETS_DB.get(pet, {})  
     results = get_ranked_results(pet_info, time)
     return jsonify(results)
+
+@app.route("/check-db")
+def check_db():
+    # testing report
+    return jsonify(PETS_DB)
+
 # run app
 if __name__ == "__main__":
     app.run(debug=True)

@@ -1,6 +1,3 @@
-
-
-/* --- Modal Overlay & Window --- */
 .modal-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
@@ -21,7 +18,7 @@
     border-radius: 16px;
     padding: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    overflow-y: auto; /* Scroll if list is long */
+    overflow-y: auto;
 }
 
 .modal-header {
@@ -33,16 +30,13 @@
     margin-bottom: 15px;
 }
 
-/* --- Pet Selection Grid --- */
-/* --- Modal Grid Layout --- */
 .pet-display {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     padding: 20px;
 }
 
-/* --- Individual Pet Card --- */
 .pet-select-card {
     display: flex;
     flex-direction: column;
@@ -57,11 +51,11 @@
 }
 
 .pet-select-card:hover {
-    border-color: #2d3748; /* Darker border on hover */
+    border-color: #2d3748;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* --- Image & Text --- */
+
 .pet-select-card img {
     width: 80px;
     height: 80px;
@@ -76,7 +70,7 @@
     font-weight: 600;
     color: #2d3748;
     text-align: center;
-    word-break: break-word; /* Prevents long names from breaking layout */
+    word-break: break-word;
 }
 
 .selected-pet-form-display {
