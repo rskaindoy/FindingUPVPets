@@ -3,40 +3,73 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Finding UPV Pets: Report Sighting</title>
-    <link rel="stylesheet" href="/static/css/style.css">    
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/report.css">
 </head>
+
 <body>
+    <div id="pet-modal" class="modal-overlay hidden">
+        <div class="modal-window">
+            <div class="modal-header">
+                <h2>Select a UPV pet</h2>
+                <a href="#" id="close-modal-btn" class="close">&times;</a>
+            </div>
+            <div class="modal-body">
+                <div class="pet-display">
+                    {% for pet in pets %}
+                        <div class="pet-select-card" onclick="selectPet('{{ pet.id }}', '{{ pet.name }}', '{{ pet.photo }}')">
+                            <img src="{{ url_for('static', filename=pet.photo) }}" alt="{{ pet.name }}">
+                            <p>{{ pet.name }}</p>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="form-card">
         <h2>📝 Report a Sighting</h2>
+        <div class="pet-section">
+            <label for="pet">The Spotted UPV Pet</label>
+            <div class="selected-pet-form-display">
+                <div class="selected-pet-details">
+                    <p>No pet selected</p>
+                </div>
+            </div>
+        
+            <input type="hidden" id="selected-pet-name" name="pet" value="">
+            
+            <p>Instruction: Check out the photos and let us know who you spotted!</p>
+            <a href="#" class="open-popup-btn" onclick="openModal(); return false;">Choose</a>
+        </div>
 
-        <!-- make the options dynamic -->
-        <!-- <label>Which pet?</label> -->
-        <select id="pet">
-            <option>Select a Pet</option>
-            <option>Cassie</option>
-        </select>
-    
-        <!-- <label>Where?</label> -->
-        <select id="location">
-            <option>Select a Spot</option>
-            <option>Canteen</option>
-        </select>
+        <div class="location-section">
+            <select id="location">
+                <option value="" disabled selected>-- Select a Spot --</option>
+                {% for l in locations %}
+                <option value="{{ l }}">{{ l }}</option>
+                {% endfor %}
+            </select>
+        </div>
 
         <div class="time-section">
             <label><b>Select Time(s) Seen:</b></label>
-            <label><input type="checkbox" name="timeRange" value="4AM-6:59AM">4:00 AM – 6:59 AM</label>
-            <label><input type="checkbox" name="timeRange" value="7AM-9:59AM">7:00 AM – 9:59 AM</label>
-            <label><input type="checkbox" name="timeRange" value="10AM-12:59PM">10:00 AM – 12:59 PM</label>
+            {% for t in times %}
+                <label for="{{ t }}">
+                <input type="radio" name="timeRange" value="{{ t }}" id="{{ t }}">
+                {{ t }}
+                </label>
+            {% endfor %}
         </div>
 
-        <button onclick="submitReport()">Submit</button>
+        <button type="button" onclick="submitReport()">Submit</button>
     </div>
 
     <footer>
         <a href="/" class="back-btn">← Go Back</a>
     </footer>
 
-    <script src="/static/js/app.js"></script>
+    <script src="../static/js/app.js"></script>
 </body>
+</html>
