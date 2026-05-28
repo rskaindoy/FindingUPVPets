@@ -107,10 +107,26 @@ def report():
         })
     return render_template("report.html", pets=pets_data, locations=LOCATIONS, times=TIME_SLOTS)
 
-@app.route("/search")
+@app.route("/search", methods=["GET", "POST"])
 def search():
-    pet_list = sorted(PETS_DB.keys())
-    return render_template("search.html", pets=pet_list, times=TIME_SLOTS, images=PET_IMAGES)
+    # opens search page
+    if request.method == "GET":
+        pet_list = sorted(PETS_DB.keys())
+        return render_template(
+            "search.html",
+            pets=pet_list,
+            times=TIME_SLOTS,
+            images=PET_IMAGES
+        )
+
+    # handles searching
+    data = request.json
+    pet = data['pet'].lower()
+    time = data['time']
+
+    pet_info = PETS_DB.get(pet, {})
+    results = get_ranked_results(pet_info, time)
+    return jsonify(results)
 
 # submit new report
 @app.route("/submit-report", methods=["POST"])
@@ -133,15 +149,6 @@ def submit_report():
 
     return jsonify({"message": f"Successfully reported {pet.title()}!"})
 
-
-def search_pet():
-    data = request.json
-    pet = data['pet'].lower()      
-    time = data['time']
-
-    pet_info = PETS_DB.get(pet, {})  
-    results = get_ranked_results(pet_info, time)
-    return jsonify(results)
 
 @app.route("/check-db")
 def check_db():

@@ -6,7 +6,7 @@ async function searchPet() {
 
     try {
         //req to flask server
-        const response = await fetch("/search-pet", {
+        const response = await fetch("/search", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({          
@@ -14,8 +14,12 @@ async function searchPet() {
                 time: time
             })
         });
+
+        console.log("Response: ", response);
+
         //parse json to arr
         const data = await response.json();
+        console.log("Data:", data);
         //for cases where there might still be leftovers from prev
         const resultsDiv = document.getElementById("results");
         resultsDiv.innerHTML = "";
