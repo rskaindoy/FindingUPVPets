@@ -3,34 +3,45 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Finding UPV Pets: Searching</title>
+    <title>Finding UPV Pets: Search</title>
     <link rel="stylesheet" href="/static/css/style.css">    
 </head>
 <body>
     <div class="form-card">
-        <h2>Looking for...?</h2>
-        
-        <!-- make the options dynamic -->
+        <h2>Find a Pet</h2>
+
+        <div class="instructions">
+            <strong>Tracking System</strong>
+            Select a pet and your current time window to find their most probable campus locations based on community logs.
+        </div>
 
         <form id="searchForm">
-            <!-- <label>Select Pet:</label> -->
-            <select id="pet">
-                <option>Select a Pet</option>
-                <option>Blackie</option>
+            <span class="field-label">Which pet are you looking for?</span>
+            <select id="pet" name="pet">
+                <option value="" disabled selected>Select a Pet</option>
+                {% for pet in pets %}
+                    <option value="{{ pet }}" data-img="{{ images.get(pet.lower(), '') }}">{{ pet }}</option>
+                {% endfor %}
             </select>
 
-            <!-- <label>Time Range:</label> -->
-            <select id="time">
-                <option>Select a Time Range</option>
-                <option>7AM - 9:59AM</option>
-                <option>10AM - 12:59PM</option>
+            <div class="pet-preview" id="petPreview" style="display: none;">
+                <img id="petImg" src="" alt="Pet profile photo" />
+                <p id="petName"></p>
+                <span class="pet-type-badge" id="petBadge"></span>
+            </div>
+
+            <span class="field-label">When are you planning to look for them?</span>
+            <select id="time" name="time">
+                <option value="" disabled selected>Select a Time Range</option>
+                {% for time in times %}
+                    <option value="{{ time }}">{{ time }}</option>
+                {% endfor %}
             </select>
 
-            <button type="button" onclick="searchPet()">Search</button>
+            <button type="button" onclick="searchPet()">Search Sighting Logs</button>
         </form>
     </div>
-
+    
     <div id="results"></div>
 
     <footer>
@@ -39,3 +50,4 @@
 
     <script src="/static/js/app.js"></script>
 </body>
+</html>
