@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Finding UPV Pets: Searching</title>
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="/static/css/style.css">    
 </head>
 <body>
     <div class="form-card">
@@ -15,24 +15,27 @@
 
         <form id="searchForm">
             <!-- <label>Select Pet:</label> -->
-            <select>
+            <select id="pet">
                 <option>Select a Pet</option>
                 <option>Blackie</option>
             </select>
 
             <!-- <label>Time Range:</label> -->
-            <select>
+            <select id="time">
                 <option>Select a Time Range</option>
                 <option>7AM - 9:59AM</option>
                 <option>10AM - 12:59PM</option>
             </select>
 
-            <button type="submit">Search</button>
+            <button type="button" onclick="searchPet()">Search</button>
         </form>
     </div>
 
-<div id="results"></div>
+    <div id="results"></div>
+
     <footer>
-        <a href="index.html" class="back-btn">← Go Back</a>
+        <a href="/" class="back-btn">← Go Back</a>
     </footer>
+
+    <script src="/static/js/app.js"></script>
 </body>

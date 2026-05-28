@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Finding UPV Pets: Report Sighting</title>
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="/static/css/style.css">    
 </head>
 <body>
     <div class="form-card">
@@ -13,13 +13,13 @@
 
         <!-- make the options dynamic -->
         <!-- <label>Which pet?</label> -->
-        <select>
+        <select id="pet">
             <option>Select a Pet</option>
             <option>Cassie</option>
         </select>
     
         <!-- <label>Where?</label> -->
-        <select>
+        <select id="location">
             <option>Select a Spot</option>
             <option>Canteen</option>
         </select>
@@ -31,9 +31,12 @@
             <label><input type="checkbox" name="timeRange" value="10AM-12:59PM">10:00 AM – 12:59 PM</label>
         </div>
 
-        <button>Submit</button>
+        <button onclick="submitReport()">Submit</button>
     </div>
+
     <footer>
-        <a href="index.html" class="back-btn">← Go Back</a>
+        <a href="/" class="back-btn">← Go Back</a>
     </footer>
+
+    <script src="/static/js/app.js"></script>
 </body>
