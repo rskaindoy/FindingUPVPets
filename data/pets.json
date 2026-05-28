@@ -1,502 +1,231 @@
 { 
-    "dogs": {
-        "ampon": {
-            "name": "Ampon",
-            "photo": "../images/dogs/ampon.png",
-            "reports": {
-                "2026-05-17": {
-                    "10:00 PM - 12:59 AM": {
-                        "Teacher's Dorm": 1
-                    }
-                },
-                "2026-05-21": {
-                    "01:00 PM - 03:59 PM": {
-                        "Teacher's Dorm": 1
-                    }
-                }
-            }
-        },
-
-        "bella": {
-            "name": "Bella/Kendall",
-            "photo": "../images/dogs/bella.png",
-            "reports": {
-                "2026-04-29": {
-                    "10:00 AM - 12:59 PM": {
-                        "CUB/Mushroom": 4
-                    },
-                    "01:00 PM - 03:59 PM": {
-                        "CUB/Mushroom": 1
-                    }
-                },
-                "2026-05-19": {
-                    "10:00 AM - 12:59 PM": {
-                        "Covered Court/Lover's Lane": 2,
-                        "Dorm/CDH": 3
-                    }
-                }
-            }
-        },
-
-        "betty": {
-            "name": "Betty",
-            "photo": "../images/dogs/betty.png",
-            "reports": {
-                "2026-03-20": {
-                    "07:00 AM - 09:59 AM": {
-                        "CFOS OWL-Wet Lab": 1
-                    }
-                }
-            }
-        },
-        
-        "blanca": {
-            "name": "Blanca",
-            "photo": "../images/dogs/blanca.png",
-            "reports": {
-                "2026-04-21": {
-                    "10:00 AM - 12:59 PM": {
-                        "Dorm/CDH": 3
-                    }
-                },
-                "2026-05-10": {
-                    "10:00 AM - 12:59 PM": {
-                        "Dorm/CDH": 1
-                    }
-                }
-            }
-        },
-        
-        "blanch": {
-            "name": "Blanch",
-            "photo": "../images/dogs/blanch.png",
-            "reports": {
-                "2026-05-11": {
-                    "01:00 PM - 03:59 PM": {
-                        "CFOS OWL-Wet Lab": 2
-                    }
-                },
-                "2026-05-12": {
-                    "10:00 AM - 12:59 PM": {
-                        "New Admin/Box 1": 1
-                    }
-                }
-            }
-        },
-        
-        "blythe": {
-            "name": "Blythe",
-            "photo": "../images/dogs/blythe.png",
-            "reports": {}
-        },
-
-        "brownie": {
-            "name": "Brownie/Leni",
-            "photo": "../images/dogs/brownie.png",
-            "reports": {
-                "2026-05-14": {
-                    "01:00 PM - 03:59 PM": {
-                        "Box 2-Physical Plant Office-CDMO": 1
-                    },
-                    "07:00 PM - 09:59 PM": {
-                        "Covered Court/Lover's Lane": 3
-                    }
-                },
-                "2026-05-25": {
-                    "07:00 AM - 09:59 AM": {
-                        "Box 2-Physical Plant Office-CDMO": 1
-                    }
-                }
-            }
-        },
-
-        "butterscotch": {
-            "name": "Butterscotch/Tiger/Hyena",
-            "photo": "../images/dogs/butterscotch.png",
-            "reports": {
-                "2026-04-02": {
-                    "10:00 AM - 12:59 PM": {
-                        "CAS": 5,
-                        "CUB/Mushroom": 2
-                    },
-                    "04:00 PM - 06:59 PM": {
-                        "New Admin/Box 1": 1
-                    }
-                },
-                "2026-04-30": {
-                    "07:00 AM - 09:59 AM": {
-                        "SOTECH": 1
-                    }
-                }
-            }
-        },
-
-        "carrot_cake": {
-            "name": "Carrot Cake",
-            "photo": "../images/dogs/carrotcake.png",
-            "reports": {}
-        },
-
-        "cm": {
-            "name": "CM",
-            "photo": "../images/dogs/cm.png",
-            "reports": {}
-        },
-
-        "ducky": {
-            "name": "Ducky",
-            "photo": "../images/dogs/ducky.png",
-            "reports": {}
-        },
-
-        "jewel": {
-            "name": "Jewel",
-            "photo": "../images/dogs/jewel.png",
-            "reports": {}
-        },
-
-        "lassie": {
-            "name": "Lassie",
-            "photo": "../images/dogs/lassie.png",
-            "reports": {}
-        },
-
-        "saki": {
-            "name": "Lee Roi/Saki",
-            "photo": "../images/dogs/saki.png",
-            "reports": {
-                "2026-05-10": {
-                    "10:00 AM - 12:59 PM": {
-                        "CUB/Mushroom": 2
-                    }
-                }
-            }
-        },
-
-        "maan": {
-            "name": "Maan",
-            "photo": "../images/dogs/maan.png",
-            "reports": {}
-        },
-
-        "mathilda": {
-            "name": "Mathilda/YangYang",
-            "photo": "../images/dogs/mathilda.png",
-            "reports": {
-                "2026-05-13": {
-                    "04:00 PM - 06:59 PM": {
-                        "Covered Court/Lover's Lane": 1,
-                        "Dorm/CDH": 2
-                    }
-                }
-            }
-        },
-
-        "milo": {
-            "name": "Milo",
-            "photo": "../images/dogs/milo.png",
-            "reports": {}
-        },
-
-        "mimi": {
-            "name": "Mimi",
-            "photo": "../images/dogs/mimi.png",
-            "reports": {}
-        },
-
-        "molly": {
-            "name": "Molly",
-            "photo": "../images/dogs/molly.png",
-            "reports": {
-                "2026-04-29": {
-                    "04:00 PM - 06:59 PM": {
-                        "Dorm/CDH": 2
-                    }
-                },
-                "2026-05-01": {
-                    "04:00 PM - 06:59 PM": {
-                        "Dorm/CDH": 5
-                    }
-                }
-            }
-        },
-
-        "odette": {
-            "name": "Odette",
-            "photo": "../images/dogs/odette.png",
-            "reports": {}
-        },
-
-        "paquito": {
-            "name": "Paquito Sr.",
-            "photo": "../images/dogs/paquito.png",
-            "reports": {
-                "2026-05-12": {
-                    "07:00 PM - 09:59 PM": {
-                        "Dorm/CDH": 2
-                    }
-                },
-                "2026-05-01": {
-                    "07:00 PM - 09:59 PM": {
-                        "Dorm/CDH": 2
-                    }
-                }
-            }
-        },
-
-        "patchy": {
-            "name": "Patchy/Isko/Panda/Spharks",
-            "photo": "../images/dogs/patchy.png",
-            "reports": {
-                "2026-04-01": {
-                    "07:00 PM - 09:59 PM": {
-                        "Dorm/CDH": 2
-                    }
-                }
-            }
-        },
-
-        "potpot": {
-            "name": "Potpot",
-            "photo": "../images/dogs/potpot.png",
-            "reports": {}
-        },
-
-        "puppy": {
-            "name": "Puppy",
-            "photo": "../images/dogs/puppy.png",
-            "reports": {
-                "2026-05-01": {
-                    "10:00 AM - 12:59 PM": {
-                        "Dorm/CDH": 1,
-                        "Covered Court/Lover's Lane": 1
-                    }
-                }
-            }
-        },
-
-        "scar2": {
-            "name": "Scar 2.0",
-            "photo": "../images/dogs/scar2.png",
-            "reports": {}
-        },
-
-        "shane": {
-            "name": "Shane",
-            "photo": "",
-            "reports": {}
-        },
-
-        "shiela": {
-            "name": "Shiela/Caramel",
-            "photo": "../images/dogs/shiela.png",
-            "reports": {}
-        },
-
-        "spot": {
-            "name": "Spot",
-            "photo": "../images/dogs/spot.png",
-            "reports": {}
-        },
-
-        "brwylee": {
-            "name": "Brwylee",
-            "photo": "../images/dogs/brwylee.png",
-            "reports": {
-                "2026-05-28": {
-                    "01:00 PM - 03:59 PM": {
-                        "CFOS Hatchery": 1,
-                        "CFOS OWL-Wet Lab": 1
-                    }
-                }
-            }
-        }
+    "ampon": {
+        "name": "Ampon",
+        "photo": "../images/dogs/ampon.png"
     },
 
-    "cats": {
-        "coli": {
-            "name": "Coli",
-            "photo": "../images/cats/coli.png",
-            "reports": {
-                "2025-02-14": {
-                    "07:00 AM - 09:59 AM": {
-                        "SOTECH": 1
-                    }
-                },
-                "2026-05-04": {
-                    "10:00 AM - 12:59 PM": {
-                        "RRC/New Library": 2
-                    }
-                }
-            }
-        },
+    "bella": {
+        "name": "Bella/Kendall",
+        "photo": "../images/dogs/bella.png"
+    },
 
-        "goldie": {
-            "name": "Goldie",
-            "photo": "../images/cats/goldie.png",
-            "reports": {
-                "2026-03-14": {
-                    "07:00 AM - 09:59 AM": {
-                        "CAS": 3
-                    },
-                    "01:00 PM - 03:59 PM": {
-                        "CAS": 2
-                    },
-                    "04:00 PM - 06:59 PM": {
-                        "CAS": 2
-                    }
-                },
-                "2026-04-23": {
-                    "10:00 AM - 12:59 PM": {
-                        "CAS": 1
-                    }
-                },
-                "2026-05-20": {
-                    "04:00 PM - 06:59 PM": {
-                        "CAS": 2
-                    }
-                }
-            }
-        },
+    "betty": {
+        "name": "Betty",
+        "photo": "../images/dogs/betty.png"
+    },
+    
+    "blanca": {
+        "name": "Blanca",
+        "photo": "../images/dogs/blanca.png"
+    },
+    
+    "blanch": {
+        "name": "Blanch",
+        "photo": "../images/dogs/blanch.png"
+    },
+    
+    "blythe": {
+        "name": "Blythe",
+        "photo": "../images/dogs/blythe.png"
+    },
 
-        "katyperry": {
-            "name": "Katy Perry",
-            "photo": "../images/cats/katyperry.png",
-            "reports": {}
-        },
+    "brownie": {
+        "name": "Brownie/Leni",
+        "photo": "../images/dogs/brownie.png"
+    },
 
-        "maomao": {
-            "name": "Maomao/Ginger",
-            "photo": "../images/cats/maomao.png",
-            "reports": {
-                "2026-04-30": {
-                    "10:00 PM - 12:59 AM": {
-                        "CFOS Hatchery": 1,
-                        "CFOS OWL-Wet Lab": 1
-                    }
-                },
-                "2026-05-21": {
-                    "04:00 PM - 06:59 PM": {
-                        "CFOS Hatchery": 3
-                    }
-                }
-            }
-        },
+    "butterscotch": {
+        "name": "Butterscotch/Tiger/Hyena",
+        "photo": "../images/dogs/butterscotch.png"
+    },
 
-        "meric": {
-            "name": "Meric",
-            "photo": "../images/cats/meric.png",
-            "reports": {}
-        },
+    "carrot_cake": {
+        "name": "Carrot Cake",
+        "photo": "../images/dogs/carrotcake.png"
+    },
 
-        "motherlitob": {
-            "name": "Mother Litob",
-            "photo": "../images/cats/motherlitob.png",
-            "reports": {}
-        },
+    "cm": {
+        "name": "CM",
+        "photo": "../images/dogs/cm.png"
+    },
 
-        "nella": {
-            "name": "Nella",
-            "photo": "../images/cats/nella.png",
-            "reports": {}
-        },
+    "ducky": {
+        "name": "Ducky",
+        "photo": "../images/dogs/ducky.png"
+    },
 
-        "tanjiro": {
-            "name": "Tanjiro",
-            "photo": "../images/cats/tanjiro.png",
-            "reports": {
-                "2026-01-01": {
-                    "01:00 PM - 03:59 PM": {
-                        "CFOS Hatchery": 2
-                    }
-                }
-            }
-        },
+    "jewel": {
+        "name": "Jewel",
+        "photo": "../images/dogs/jewel.png"
+    },
 
-        "tiger": {
-            "name": "Tiger",
-            "photo": "../images/cats/tiger.png",
-            "reports": {}
-        },
+    "lassie": {
+        "name": "Lassie",
+        "photo": "../images/dogs/lassie.png"
+    },
 
-        "badbad": {
-            "name": "Badbad",
-            "photo": "../images/cats/badbad.png",
-            "reports": {}
-        },
+    "saki": {
+        "name": "Lee Roi/Saki",
+        "photo": "../images/dogs/saki.png"
+    },
 
-        "midnight": {
-            "name": "Midnight",
-            "photo": "../images/cats/midnight.png",
-            "reports": {}
-        },
+    "maan": {
+        "name": "Maan",
+        "photo": "../images/dogs/maan.png"
+    },
 
-        "albie": {
-            "name": "Albie",
-            "photo": "../images/cats/albie.png",
-            "reports": {
-                "2026-05-05": {
-                    "01:00 PM - 03:59 PM": {
-                        "CFOS Hatchery": 2
-                    }
-                }
-            }
-        },
+    "mathilda": {
+        "name": "Mathilda/YangYang",
+        "photo": "../images/dogs/mathilda.png"
+    },
 
-        "peachy": {
-            "name": "Peachy",
-            "photo": "../images/cats/peachy.png",
-            "reports": {
-                "2026-05-05": {
-                    "01:00 PM - 03:59 PM": {
-                        "CFOS Hatchery": 2
-                    }
-                },
-                "2026-05-06": {
-                    "10:00 AM - 12:59 PM": {
-                        "CFOS Hatchery": 1
-                    }
-                }
-            }
-        },
+    "milo": {
+        "name": "Milo",
+        "photo": "../images/dogs/milo.png"
+    },
 
-        "muzan": {
-            "name": "Muzan",
-            "photo": "../images/cats/muzan.png",
-            "reports": {}
-        },
-        
-        "patches": {
-            "name": "Patches",
-            "photo": "../images/cats/patches.png",
-            "reports": {}
-        },
+    "mimi": {
+        "name": "Mimi",
+        "photo": "../images/dogs/mimi.png"
+    },
 
-        "trisha": {
-            "name": "Trisha",
-            "photo": "../images/cats/trisha.png",
-            "reports": {
-                "2026-02-14": {
-                    "10:00 PM - 12:59 AM": {
-                        "Dorm/CDH": 1,
-                        "Staff House": 1
-                    }
-                },
-                "2026-05-21": {
-                    "01:00 AM - 03:59 AM": {
-                        "Dorm/CDH": 1
-                    },
-                    "01:00 PM - 03:59 PM": {
-                        "Dorm/CDH": 2
-                    }
-                }
-            }
-        },
+    "molly": {
+        "name": "Molly",
+        "photo": "../images/dogs/molly.png"
+    },
 
-        "mikay": {
-            "name": "Michaella/Mikay",
-            "photo": "../images/cats/mikay.png",
-            "reports": {}
-        }
+    "odette": {
+        "name": "Odette",
+        "photo": "../images/dogs/odette.png"
+    },
+
+    "paquito": {
+        "name": "Paquito Sr.",
+        "photo": "../images/dogs/paquito.png"
+    },
+
+    "patchy": {
+        "name": "Patchy/Isko/Panda/Spharks",
+        "photo": "../images/dogs/patchy.png"
+    },
+
+    "potpot": {
+        "name": "Potpot",
+        "photo": "../images/dogs/potpot.png"
+    },
+
+    "puppy": {
+        "name": "Puppy",
+        "photo": "../images/dogs/puppy.png"
+    },
+
+    "scar2": {
+        "name": "Scar 2.0",
+        "photo": "../images/dogs/scar2.png"
+    },
+
+    "shane": {
+        "name": "Shane",
+        "photo": ""
+    },
+
+    "shiela": {
+        "name": "Shiela/Caramel",
+        "photo": "../images/dogs/shiela.png"
+    },
+
+    "spot": {
+        "name": "Spot",
+        "photo": "../images/dogs/spot.png"
+    },
+
+    "brwylee": {
+        "name": "Brwylee",
+        "photo": "../images/dogs/brwylee.png"
+    },
+
+    "coli": {
+        "name": "Coli",
+        "photo": "../images/cats/coli.png"
+    },
+
+    "goldie": {
+        "name": "Goldie",
+        "photo": "../images/cats/goldie.png"
+    },
+
+    "katyperry": {
+        "name": "Katy Perry",
+        "photo": "../images/cats/katyperry.png"
+    },
+
+    "maomao": {
+        "name": "Maomao/Ginger",
+        "photo": "../images/cats/maomao.png"
+    },
+
+    "meric": {
+        "name": "Meric",
+        "photo": "../images/cats/meric.png"
+    },
+
+    "motherlitob": {
+        "name": "Mother Litob",
+        "photo": "../images/cats/motherlitob.png"
+    },
+
+    "nella": {
+        "name": "Nella",
+        "photo": "../images/cats/nella.png"
+    },
+
+    "tanjiro": {
+        "name": "Tanjiro",
+        "photo": "../images/cats/tanjiro.png"
+    },
+
+    "tiger": {
+        "name": "Tiger",
+        "photo": "../images/cats/tiger.png"
+    },
+
+    "badbad": {
+        "name": "Badbad",
+        "photo": "../images/cats/badbad.png"
+    },
+
+    "midnight": {
+        "name": "Midnight",
+        "photo": "../images/cats/midnight.png"
+    },
+
+    "albie": {
+        "name": "Albie",
+        "photo": "../images/cats/albie.png"
+    },
+
+    "peachy": {
+        "name": "Peachy",
+        "photo": "../images/cats/peachy.png"
+    },
+
+    "muzan": {
+        "name": "Muzan",
+        "photo": "../images/cats/muzan.png"
+    },
+    
+    "patches": {
+        "name": "Patches",
+        "photo": "../images/cats/patches.png"
+    },
+
+    "trisha": {
+        "name": "Trisha",
+        "photo": "../images/cats/trisha.png"
+    },
+
+    "mikay": {
+        "name": "Michaella/Mikay",
+        "photo": "../images/cats/mikay.png"
     }
 }
