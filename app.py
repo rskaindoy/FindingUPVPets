@@ -133,7 +133,7 @@ def submit_report():
 
     return jsonify({"message": f"Successfully reported {pet.title()}!"})
 
-
+@app.route("/search-pet", methods=["POST"])
 def search_pet():
     data = request.json
     pet = data['pet'].lower()      
