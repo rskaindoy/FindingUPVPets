@@ -5,7 +5,7 @@
 '''
 
 import json
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -42,6 +42,10 @@ def home():
 
 @app.route("/report")
 def report():
+    
+    for id, pet in pets.items():
+        if 'photo' not in pet:
+            pet['photo'] = ""
     return render_template("report.html", pets=pets, locations=locations, times=times)
 
 @app.route("/search")
@@ -52,7 +56,7 @@ def search():
 # submit new report
 @app.route("/submit-report", methods=["POST"])
 def submit_report():
-    data = request.json
+    data = request.get_json()
 
     pet = data["pet"]
     time = data["time"]

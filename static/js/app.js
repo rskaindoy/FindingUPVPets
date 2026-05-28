@@ -33,9 +33,22 @@ async function searchPet() {
 // report func
 async function submitReport() {
 
-    const pet = document.getElementById("pet").value;
+    const pet = document.getElementById("selected-pet-name").value;
     const location = document.getElementById("location").value;
-    const time = document.querySelector('input[name="timeRange"]:checked').value;
+    const time = document.querySelector('input[name="timeRange"]:checked');
+
+    if (!pet || !pet.value) {
+        alert("Select a pet.");
+        return;
+    }
+    if (!location || location === "-- Select a Spot --") {
+        alert("Select a location");
+        return;
+    }
+    if (!time) {
+        alert("Select a time range.");
+        return;
+    }
 
     const response = await fetch("/submit-report", {
         method: "POST",
