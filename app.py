@@ -119,9 +119,7 @@ def submit_report():
     pet = data.get("pet", "").lower()
     location = data.get("location")
     time = data.get("time")
-
-    print(f"DEBUG: Received pet={pet}, time={time}, location={location}")
-
+    
     if pet not in PETS_DB:
         return jsonify({"message": "Pet not found"}), 404
 

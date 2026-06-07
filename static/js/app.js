@@ -74,9 +74,8 @@ async function submitReport() {
     const location = document.getElementById("location").value;
     const time = document.querySelector('input[name="timeRange"]:checked').value;
 
-    console.log("Data to send:", { pet, location, time});
     if (!pet || pet === "") {
-        alert("Please elect a pet.");
+        alert("Please select a pet.");
         return;
     }
     if (!location || location === "-- Select a Spot --") {
@@ -103,6 +102,7 @@ async function submitReport() {
     window.location.href ="/";
 }
 
+// open modal form for pet selection
 function openModal() {
     const modal = document.getElementById('pet-modal');
     if (modal) {
